@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: lottery-service
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    username: root
+    password: abc123
+    url: jdbc:mysql://localhost:3306/lottery
+    driver-class-name: com.mysql.jdbc.Driver
+server:
+  port: 8070
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10000/eureka/
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+
